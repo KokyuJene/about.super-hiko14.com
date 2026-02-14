@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Super Hiko14</title>
+  <meta name="description" content="Super Hiko14とは">
+  <link rel="icon" href="https://super-hiko14.me/favicon.ico">
+  <link rel="icon" type="image/png" href="https://super-hiko14.me/favicon.png">
+  <link rel="stylesheet" href="https://super-hiko14.com/main.css">
+  <script src="https://super-hiko14.com/main.js"></script>
+  <style>
+    .profile-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-name {
+      font-size: 1.8rem;
+      margin: 10px 0;
+    }
+
+    .profile-role {
+      color: #999;
+      font-size: 0.95rem;
+      margin: 5px 0 0 0;
+    }
+
+    .tab-menu {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .tab-item {
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 25px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'jost', 'zenkaku', sans-serif;
+    }
+
+    .tab-item:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    .tab-item.active {
+      background-color: #333;
+      color: white;
+    }
+
+    html[data-theme="dark"] .tab-item {
+      background-color: #1a1a1a;
+      color: #d0d0d0;
+    }
+
+    html[data-theme="dark"] .tab-item:hover {
+      background-color: #252525;
+    }
+
+    html[data-theme="dark"] .tab-item.active {
+      background-color: #d0d0d0;
+      color: #080808;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .info-item {
+      text-align: center;
+      padding: 20px 15px;
+    }
+
+    .info-label {
+      font-size: 0.8rem;
+      color: #999;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .info-value {
+      font-size: 1.1rem;
+    }
+
+    .link-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .link-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    html[data-theme="dark"] .link-row {
+      border-bottom-color: #222;
+    }
+
+    .link-platform {
+      font-weight: 500;
+      opacity: 0.7;
+    }
+
+    .note-text {
+      font-size: 0.85rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .link_yt {
+      color: #fa6280;
+    }
+
+    .link_x {
+      color: #b1edff;
+    }
+
+    .link_steam {
+      color: #77abeb;
+    }
+
+    .link_xbox {
+      color: #9aee9a;
+    }
+
+    @media (max-width: 768px) {
+      .profile-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .profile-name {
+        font-size: 1.5rem;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <div class="box">
+      <div class="profile-section">
+        <img src="./My_icon.png" alt="Super Hiko14" class="profile-image">
+        <h1 class="profile-name">Super Hiko14</h1>
+        <p class="profile-role">ぽんこつで常時眠い人 / KokyuJene Server Owner</p>
+      </div>
+
+      <div class="tab-menu">
+        <button class="tab-item active" onclick="switchTab(0)">概要</button>
+        <button class="tab-item" onclick="switchTab(1)">詳細</button>
+        <button class="tab-item" onclick="switchTab(2)">リンク</button>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="line"></div>
+      </div>
+    </div>
+      
+    <div class="tab-content active">
+        <div class="box">
+          <h2 class="section-title">自己紹介</h2>
+          <p class="sub-title">Basic Introduction</p>
+          <p class="description">
+            <a href="https://kokyujene.github.io">『新 高級ジェネ™』</a>サーバーオーナーをやってる人<br>
+            <a href="https://minecraft.net">MINECRAFT</a>のコマンドを得意としています
+          </p>
+        </div>
+
+        <div class="box">
+          <h2 class="section-title">お気に入りのゲーム</h2>
+          <p class="sub-title">Favorite Games</p>
+          <div class="game-list">
+            <span class="game-item"><a href="https://minecraft.net">MINECRAFT</a></span>
+            <span class="game-item"><a href="https://deltarune.jp">DELTARUNE</a></span>
+            <span class="game-item"><a href="https://undertale.jp">UNDERTALE</a></span>
+            <span class="game-item"><a href="https://daidai7742.wixsite.com/daidai">アクアリウムは踊らない</a></span>
+            <span class="game-item"><a href="https://oneshot-game.com">OneShot</a></span>
+            <span class="game-item"><a href="https://www.wakuwakugames.com/enjoythediner">ファミレスを享受せよ</a></span>
+            <span class="game-item"><a href="https://store.steampowered.com/app/3606890/Upload_Labs/?l=japanese">Upload Labs</a></span>
+            <span class="game-item"><a href="https://www.playdead.com/games/inside/">INSIDE</a></span>
+            <span class="game-item"><a href="https://www.sheepythegame.com">Sheepy</a></span>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2 class="section-title">使える言語</h2>
+          <p class="sub-title">Programming Languages</p>
+          <div class="lang-list">
+            <span class="lang-item">HTML</span>
+            <span class="lang-item">CSS</span>
+            <span class="lang-item">JavaScript</span>
+            <span class="lang-item">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content">
+        <div class="section-title">個人情報</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-label">Birthday</div>
+            <div class="info-value">8.14</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Born</div>
+            <div class="info-value">2012 / Japan</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Location</div>
+            <div class="info-value">雪国</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Status</div>
+            <div class="info-value">学生</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">MBTI</div>
+            <div class="info-value">INFP</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Pets</div>
+            <div class="info-value">猫 2匹</div>
+          </div>
+        </div>
+        <div class="info-item">
+        <div class="info-label">Device in use</div>
+        <div class="info-value">
+          <strong>Windows 11 PC</strong><br>
+          Intel i5 13KF / RTX 4000<br>
+          RAM 32GB / SSD 1TB
+      </div>
+      </div>
+      </div>
+
+      <div class="tab-content">
+        <div class="box">
+        <div class="section-title">ソーシャルリンク</div>
+        <p class="note-text">※ 高級ジェネとは別のアカウントです</p>
+        <div class="link-grid">
+          <div class="link-row">
+            <span class="link-platform">Youtube</span>
+            <a href="https://youtube.com/@super-hiko14" target="_blank" rel="noopener"><div class="link_yt">@super-hiko14</div></a>
+          </div>
+          <div class="link-row">
+            <span class="link-platform">Twitter (X)</span>
+            <a href="https://twitter.com/@super_hiko14" target="_blank" rel="noopener"><div class="link_x">@super_hiko14</div></a>
+          </div>
+          <div class="link-row">
+            <span class="link-platform">Steam</span>
+            <a href="https://steamcommunity.com/id/super-hiko14/" target="_blank" rel="noopener"><div class="link_steam">@super-hiko14</div></a>
+          </div>
+          <div class="link-row">
+            <span class="link-platform">Xbox</span>
+            <a href="https://launch.minecraft.net/profile/Super%20Hiko14" target="_blank" rel="noopener"><div class="link_xbox">Super Hiko14</div></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="box">
+      <div class="footer">
+        <div class="footer-controls">
+          <button class="theme-toggle" aria-label="テーマ切り替え">
+            <img src="https://super-hiko14.com/sozai/images/moon.webp" alt="ダークモード" class="theme-icon-light">
+            <img src="https://super-hiko14.com/sozai/images/sun.webp" alt="ライトモード" class="theme-icon-dark">
+          </button>
+          <button class="scroll-to-top" aria-label="トップへ戻る">
+            <img src="https://super-hiko14.com/sozai/images/top_light.webp" alt="トップへ" class="scroll-icon-light">
+            <img src="https://super-hiko14.com/sozai/images/top_dark.webp" alt="トップへ" class="scroll-icon-dark">
+          </button>
+        </div>
+        <p>© 2026 Super Hiko14 All rights reserved.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function switchTab(index) {
+      const tabs = document.querySelectorAll('.tab-item');
+      const contents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+      
+      contents.forEach((content, i) => {
+        content.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+</body>
+</html>
+
