@@ -9,183 +9,6 @@
   <link rel="icon" type="image/png" href="https://super-hiko14.me/favicon.png">
   <link rel="stylesheet" href="https://super-hiko14.com/main.css">
   <script src="https://super-hiko14.com/main.js"></script>
-  <style>
-    .profile-section {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 20px;
-      display: block;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
-    }
-
-    .profile-image:hover {
-      transform: scale(1.05);
-    }
-
-    .profile-name {
-      font-size: 1.8rem;
-      margin: 10px 0;
-    }
-
-    .profile-role {
-      color: #999;
-      font-size: 0.95rem;
-      margin: 5px 0 0 0;
-    }
-
-    .tab-menu {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 30px 0;
-      flex-wrap: wrap;
-    }
-
-    .tab-item {
-      background-color: #f0f0f0;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 25px;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-family: 'jost', 'zenkaku', sans-serif;
-    }
-
-    .tab-item:hover {
-      background-color: #e0e0e0;
-      transform: translateY(-2px);
-    }
-
-    .tab-item.active {
-      background-color: #333;
-      color: white;
-    }
-
-    html[data-theme="dark"] .tab-item {
-      background-color: #1a1a1a;
-      color: #d0d0d0;
-    }
-
-    html[data-theme="dark"] .tab-item:hover {
-      background-color: #252525;
-    }
-
-    html[data-theme="dark"] .tab-item.active {
-      background-color: #d0d0d0;
-      color: #080808;
-    }
-
-    .tab-content {
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin: 25px 0;
-    }
-
-    .info-item {
-      text-align: center;
-      padding: 20px 15px;
-    }
-
-    .info-label {
-      font-size: 0.8rem;
-      color: #999;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .info-value {
-      font-size: 1.1rem;
-    }
-
-    .link-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 20px 0;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .link-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    html[data-theme="dark"] .link-row {
-      border-bottom-color: #222;
-    }
-
-    .link-platform {
-      font-weight: 500;
-      opacity: 0.7;
-    }
-
-    .note-text {
-      font-size: 0.85rem;
-      color: #999;
-      margin-bottom: 20px;
-    }
-
-    .link_yt {
-      color: #fa6280;
-    }
-
-    .link_x {
-      color: #b1edff;
-    }
-
-    .link_steam {
-      color: #77abeb;
-    }
-
-    .link_xbox {
-      color: #9aee9a;
-    }
-
-    @media (max-width: 768px) {
-      .profile-image {
-        width: 120px;
-        height: 120px;
-      }
-
-      .profile-name {
-        font-size: 1.5rem;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -249,6 +72,7 @@
       </div>
 
       <div class="tab-content">
+        <div class="box">
         <div class="section-title">個人情報</div>
         <div class="info-grid">
           <div class="info-item">
@@ -282,6 +106,7 @@
           <strong>Windows 11 PC</strong><br>
           Intel i5 13KF / RTX 4000<br>
           RAM 32GB / SSD 1TB
+      </div>
       </div>
       </div>
       </div>
